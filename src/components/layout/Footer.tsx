@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-1 space-y-3">
             <div className="flex items-center gap-2">
               <div className="w-7 h-7 rounded-lg overflow-hidden border border-cyan-500/30 flex items-center justify-center shadow-[0_0_8px_rgba(34,211,238,0.2)]">
-                <img src="/favicon.svg" alt="QuantumLearn AI Icon" className="w-full h-full object-cover" />
+                <img src="./favicon.svg" alt="QuantumLearn AI Icon" className="w-full h-full object-cover" />
               </div>
               <span className="font-outfit font-bold text-slate-100 text-lg">QuantumLearn AI</span>
             </div>

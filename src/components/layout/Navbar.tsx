@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ userName: propUserName }) => {
         {/* Zone 1: Brand Wordmark Element */}
         <Link to="/" className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white whitespace-nowrap shrink-0 group">
           <div className="relative flex items-center justify-center w-9 h-9 rounded-xl overflow-hidden border border-cyan-500/40 group-hover:border-cyan-400 transition-colors shadow-[0_0_12px_rgba(34,211,238,0.25)]">
-            <img src="/favicon.svg" alt="QuantumLearn AI Icon" className="w-full h-full object-cover" />
+            <img src="./favicon.svg" alt="QuantumLearn AI Icon" className="w-full h-full object-cover" />
           </div>
           <span className="font-outfit text-xl">
             Quantum<span className="text-cyan-400">Learn</span> <span className="text-xs px-1.5 py-0.5 rounded font-mono font-medium text-purple-300 border border-purple-500/30 bg-purple-950/40">AI</span>

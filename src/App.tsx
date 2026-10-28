@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';
@@ -35,7 +35,7 @@ const ConditionalFooter: React.FC = () => {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col bg-[#050814] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
@@ -63,6 +63,6 @@ export default function App() {
           <ConditionalFooter />
         </div>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

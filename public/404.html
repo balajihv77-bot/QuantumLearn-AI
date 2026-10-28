@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>QuantumLearn AI — Redirecting</title>
+    <script type="text/javascript">
+      // Single Page Application redirect script for GitHub Pages
+      // Redirects non-root paths to the hash route so that direct links work without 404
+      (function() {
+        var l = window.location;
+        var pathname = l.pathname;
+        // Determine repo segment if hosted under username.github.io/<repo>/
+        var segments = pathname.split('/').filter(Boolean);
+        var repoName = segments.length > 0 ? segments[0] : '';
+        var remainingPath = segments.slice(1).join('/');
+
+        var redirectUrl = l.protocol + '//' + l.host + '/' + repoName + '/#/' + remainingPath + (l.search || '') + (l.hash || '');
+        window.location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body style="background-color: #050814; color: #22d3ee; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <p>Redirecting to QuantumLearn AI...</p>
+  </body>
+</html>
