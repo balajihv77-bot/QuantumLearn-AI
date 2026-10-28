@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Student academic profile and quantum learning progress",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "email": { "type": "string", "maxLength": 255 },
+        "displayName": { "type": "string", "maxLength": 128 },
+        "institution": { "type": "string", "maxLength": 255 },
+        "role": { "type": "string", "maxLength": 64 },
+        "xp": { "type": "number" },
+        "level": { "type": "number" },
+        "streakDays": { "type": "number" },
+        "createdAt": { "type": "string", "maxLength": 64 },
+        "updatedAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["uid", "email", "displayName"]
+    },
+    "QuantumCircuit": {
+      "title": "QuantumCircuit",
+      "description": "Saved quantum circuit grid created by student in Workbench",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 128 },
+        "description": { "type": "string", "maxLength": 500 },
+        "numQubits": { "type": "number" },
+        "numSteps": { "type": "number" },
+        "isPublic": { "type": "boolean" },
+        "createdAt": { "type": "string", "maxLength": 64 },
+        "updatedAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["id", "userId", "title", "numQubits", "numSteps"]
+    },
+    "InterviewSession": {
+      "title": "InterviewSession",
+      "description": "AI Mock Interview session tracking role, difficulty and progression",
+      "type": "object",
+      "properties": {
+        "sessionId": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "role": { "type": "string", "maxLength": 100 },
+        "difficulty": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "string", "maxLength": 64 },
+        "completedAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["sessionId", "userId", "role", "difficulty", "status"]
+    },
+    "InterviewReport": {
+      "title": "InterviewReport",
+      "description": "Finalized interview performance scorecard and rubrics",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "sessionId": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "overallScore": { "type": "number" },
+        "createdAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["id", "sessionId", "userId", "overallScore"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "UserProfile" },
+      "description": "Private student account documents accessed only by account owner"
+    },
+    "/circuits/{circuitId}": {
+      "schema": { "$ref": "QuantumCircuit" },
+      "description": "Quantum circuit designs created by learners"
+    },
+    "/interviewSessions/{sessionId}": {
+      "schema": { "$ref": "InterviewSession" },
+      "description": "Mock interview sessions conducted by candidates"
+    },
+    "/interviewReports/{reportId}": {
+      "schema": { "$ref": "InterviewReport" },
+      "description": "Comprehensive performance evaluations and scorecards"
+    }
+  }
+}

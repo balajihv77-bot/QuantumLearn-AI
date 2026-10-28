@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#081b33" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </radialGradient>
+    <linearGradient id="orbitCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="orbitPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark Cosmic Badge Base -->
+  <rect width="128" height="128" rx="28" fill="url(#bgGlow)" />
+  <rect width="126" height="126" x="1" y="1" rx="27" fill="none" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Quantum Orbital Rings -->
+  <!-- Ring 1: Vertical Cyan Orbit -->
+  <ellipse cx="64" cy="64" rx="24" ry="46" fill="none" stroke="url(#orbitCyan)" stroke-width="3" filter="url(#neonGlow)" />
+  
+  <!-- Ring 2: Diagonal Purple Orbit 60 deg -->
+  <ellipse cx="64" cy="64" rx="24" ry="46" fill="none" stroke="url(#orbitPurple)" stroke-width="3" transform="rotate(60 64 64)" filter="url(#neonGlow)" />
+
+  <!-- Ring 3: Diagonal Purple Orbit 120 deg -->
+  <ellipse cx="64" cy="64" rx="24" ry="46" fill="none" stroke="url(#orbitCyan)" stroke-width="2.5" transform="rotate(120 64 64)" filter="url(#neonGlow)" />
+
+  <!-- Superposition Particle Nodes -->
+  <circle cx="64" cy="18" r="3" fill="#22d3ee" filter="url(#neonGlow)" />
+  <circle cx="98" cy="44" r="2.5" fill="#c084fc" filter="url(#neonGlow)" />
+  <circle cx="30" cy="84" r="2.5" fill="#22d3ee" filter="url(#neonGlow)" />
+  <circle cx="64" cy="110" r="3" fill="#c084fc" filter="url(#neonGlow)" />
+
+  <!-- Central Qubit Core -->
+  <circle cx="64" cy="64" r="16" fill="url(#coreGlow)" filter="url(#neonGlow)" />
+  <circle cx="59" cy="59" r="4" fill="#ffffff" opacity="0.6" />
+</svg>

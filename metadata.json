@@ -1,0 +1,6 @@
+{
+  "name": "QuantumLearn AI",
+  "description": "Interactive quantum algorithm learning platform for students and beginners featuring 3D Bloch sphere simulations, visual circuit lab, and AI quantum tutor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

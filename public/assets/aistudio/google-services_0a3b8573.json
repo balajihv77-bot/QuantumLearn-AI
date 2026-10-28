@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "796163443699",
+    "project_id": "quantumlearn-ai",
+    "storage_bucket": "quantumlearn-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796163443699:android:4e951350abbf6b24d22086",
+        "android_client_info": {
+          "package_name": "quantumlearn.db"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6GBHYO2TtMMAoQ9khyYsdfx0dr-v2HXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
